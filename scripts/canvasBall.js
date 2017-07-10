@@ -250,7 +250,7 @@ var mousePos = {
 	y: ""
 };
 
-canvas.addEventListener('mousemove', function(e) {
+canvas.addEventListener('touchmove', function(e) {
 	//IE6/7/8支持通过window.event获取对象
 	e = e || window.event;
 	if (e.pageX) {
@@ -262,7 +262,7 @@ canvas.addEventListener('mousemove', function(e) {
 	}
 });
 
-canvas.addEventListener('mouseleave', function(e) {
+canvas.addEventListener('touchend', function(e) {
 	mousePos.x = "";
 	mousePos.y = "";
 });
