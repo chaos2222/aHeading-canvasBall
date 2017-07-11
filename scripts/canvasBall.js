@@ -277,6 +277,7 @@ canvas.addEventListener('touchstart', function(e) {
 canvas.addEventListener('mousemove', function(e) {
 	//IE6/7/8支持通过window.event获取对象
 	e = e || window.event;
+	e.preventDefault();
 	if (e.pageX) {
 		mousePos.x = e.pageX - canvas.offsetLeft;
 		mousePos.y = e.pageY - canvas.offsetTop;
