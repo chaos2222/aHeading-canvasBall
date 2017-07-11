@@ -274,7 +274,24 @@ canvas.addEventListener('touchstart', function(e) {
 	}
 });
 
+canvas.addEventListener('mousemove', function(e) {
+	//IE6/7/8支持通过window.event获取对象
+	e = e || window.event;
+	if (e.pageX) {
+		mousePos.x = e.pageX - canvas.offsetLeft;
+		mousePos.y = e.pageY - canvas.offsetTop;
+	} else{
+		mousePos.x = e.clientX + document.body.scrollLeft - document.body.clientLeft;
+		mousePos.y = e.clientY + document.body.scrollTop - document.body.clientTop;
+	}
+});
+
 canvas.addEventListener('touchend', function(e) {
+	mousePos.x = "";
+	mousePos.y = "";
+});
+
+canvas.addEventListener('mouseout', function(e) {
 	mousePos.x = "";
 	mousePos.y = "";
 });
