@@ -286,12 +286,12 @@ canvas.addEventListener('mousemove', function(e) {
 	}
 });
 
-canvas.addEventListener('touchend', function(e) {
+canvas.addEventListener('mouseout', function(e) {
 	mousePos.x = "";
 	mousePos.y = "";
 });
 
-canvas.addEventListener('mouseout', function(e) {
+canvas.addEventListener('touchend', function(e) {
 	mousePos.x = "";
 	mousePos.y = "";
 });
