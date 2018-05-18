@@ -274,7 +274,7 @@ canvas.addEventListener('touchstart', function(e) {
 	}
 });
 
-/*
+
 canvas.addEventListener('mousemove', function(e) {
 	//IE6/7/8支持通过window.event获取对象
 	e = e || window.event;
@@ -287,19 +287,20 @@ canvas.addEventListener('mousemove', function(e) {
 		mousePos.y = e.clientY + document.body.scrollTop - document.body.clientTop;
 	}
 });
-*/
 
-/*
+
+
 canvas.addEventListener('mouseout', function(e) {
 	mousePos.x = "";
 	mousePos.y = "";
 });
-*/
 
+/*
 canvas.addEventListener('touchend', function(e) {
 	mousePos.x = "";
 	mousePos.y = "";
 });
+*/
 
 animate(canvas, balls, mousePos);
  
